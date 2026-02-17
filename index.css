@@ -2,6 +2,14 @@
     margin: 0;
 }
 
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html {
+    scrollbar-color: auto transparent;
+}
+
 body {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   flex-direction: column;
@@ -17,13 +25,20 @@ body {
   font-family: sans-serif;
 }
 
+a {
+    color: #ffd621;
+}
+
 .section-header {
     border-radius: 2em;
-    box-shadow: 2px 2px 1px #3f3f3f;
+    box-shadow: 2px 2px 1px #292929;
     background-color: #6e6a7e;
     border: 2px solid rgb(39, 39, 39);
     padding: 0.5em;
-    width: fit-content
+    width: fit-content;
+    width: 100%;
+    align-items: center;
+    text-align: center;
 }
 
 .section-body {
@@ -54,8 +69,15 @@ body {
 .about-me img {
     border-radius: 2em;
     border: 5px solid white;
-    width: 400px;
+    max-width: 50%;
     height: auto;
+}
+
+.img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .segment {
@@ -63,11 +85,24 @@ body {
     flex-direction: column;
     border-radius: 0.5em;
     gap: 0.5em;
+    align-items: center;
 }
 
 .artifact-segment {
     display: flex;
     justify-content: space-between;
     gap: 0.5em;
+    column-gap: 2em;
 }
 
+.artifact-segment .segment {
+    width: 30%;
+}
+
+.artifact-segment .segment .section-body{
+    display: flex;
+    gap: 2em;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
